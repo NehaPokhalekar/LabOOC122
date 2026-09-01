@@ -32,7 +32,8 @@ int main()
 {
     Complex c1(4, 5), c2(8, 9);
 
-    c2.add(c1);
+
+    c1.add(c2);
     Complex diff = c1.subtract(c2);
 
     cout << "First Complex Number: ";
@@ -40,12 +41,12 @@ int main()
 
     cout << "Second Complex Number: ";
     c2.display();
-
+    
     cout << "Addition: ";
     c1.display();
 
     cout << "Subtraction: ";
-    c2.display();
+    diff.display();
 
     
     return 0;
