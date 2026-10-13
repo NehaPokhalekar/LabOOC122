@@ -23,6 +23,15 @@ public:
         cout << "\nFeet & Inches (Decrement): "
              << feet << "'" << inch;
     }
+
+    void operator+()
+    {
+        feet=feet+3;
+        inch--;
+
+        cout << "\nFeet & Inches (Decrement): "
+             << feet << "'" << inch;
+    }
 };
 
 // Driver Code
@@ -32,6 +41,13 @@ int main()
 
     // Use (-) unary operator by single operand
     -d1;
+    +d1;
+    
+    int a=10,b=20,c;
+    c=a+b;
+    cout<<"\nAddition:"<<c;
+
+    cout<<"feet & inch :"<<d1.feet<<d1.inch;
 
     return 0;
-}+
+}

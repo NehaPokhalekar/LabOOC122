@@ -20,13 +20,16 @@ public:
 
     // Overloading (+) operator to perform addition
     // of two Distance objects (Call by reference)
-    Distance operator+(Distance& d2)
+    Distance operator+(Distance d2)
     {
         // Create an object to return
         Distance d3;
-
+        d2.feet=45;
+        this->feet=30;
         d3.feet = this->feet + d2.feet;
         d3.inch = this->inch + d2.inch;
+
+        
 
         // Return the resulting object
         return d3;
@@ -34,17 +37,22 @@ public:
 };
 
 // Driver Code
+
 int main()
 {
     Distance d1(8, 9);
     Distance d2(10, 2);
     Distance d3;
 
+    cout<<d1.feet;
     // Use overloaded operator
     d3 = d1 + d2;
 
     cout << "\nTotal Feet & Inches: "
          << d3.feet << "'" << d3.inch;
+    
+    cout<<d1.feet;
+    cout<<d2.feet;
 
     return 0;
 }
